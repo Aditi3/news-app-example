@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -92,6 +92,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
 				LastUpgradeCheck = 1210;
+				ORGANIZATIONNAME = "Aditi Agrawal";
 				TargetAttributes = {
 					4942FF88258C43C800CB3075 = {
 						CreatedOnToolsVersion = 12.1;
@@ -99,7 +100,7 @@
 				};
 			};
 			buildConfigurationList = 4942FF84258C43C800CB3075 /* Build configuration list for PBXProject "HelloNews" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
