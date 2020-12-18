@@ -28,14 +28,21 @@ class HNArticleTableViewCell: UITableViewCell {
     }
     
     func setupLayout() {
-        titleLabel?.textAlignment = .center
-        categoryLabel?.textAlignment = .left
-        articleImageView?.contentMode = .scaleAspectFit
+        titleLabel?.textAlignment = .left
+        titleLabel?.textColor = .white
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+        titleLabel?.numberOfLines = 3
+        
+        categoryLabel?.textAlignment = .center
+        
+        articleImageView?.contentMode = .scaleAspectFill
     }
     
     func setData(article: Article) {
         titleLabel?.text = article.title
-        categoryLabel?.text = article.category.rawValue
+        categoryLabel?.text = "  \(article.category.rawValue)  \u{200c}"
+        
+        categoryLabel?.backgroundColor = article.categoryColor
         let url = URL(string: article.urlToImage)
         articleImageView?.kf.setImage(with: url)
     }

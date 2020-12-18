@@ -29,7 +29,7 @@ class HNArticlesTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 260;
+        return UITableView.automaticDimension;
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
