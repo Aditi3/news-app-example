@@ -7,6 +7,7 @@ target 'HelloNews' do
   use_frameworks!
   # Pods for HelloNews
   pod 'Alamofire'
+  pod 'Kingfisher'
   pod 'DocumentClassifier', '1.0.0'
   
 end
