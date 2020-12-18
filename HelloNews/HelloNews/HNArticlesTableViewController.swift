@@ -16,7 +16,10 @@ class HNArticlesTableViewController: UITableViewController {
     }
     
     func loadData() {
-        HNArticleService().fetchArticle()
+        HNArticleService().fetchArticles { (articles) in
+            // Handle fetched articles
+            print("Data is loaded, article count: \(articles.count)")
+        }
     }
 
     // MARK: - Table view data source
