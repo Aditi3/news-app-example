@@ -21,6 +21,8 @@ class HNArticlesTableViewController: UITableViewController {
         HNArticleService().fetchArticles { (articles) in
             // Handle fetched articles
             print("Data is loaded, article count: \(articles.count)")
+            self.articles = articles
+            self.tableView.reloadData()
         }
     }
 
@@ -37,13 +39,13 @@ class HNArticlesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return articles.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCellIdentifier", for: indexPath) as! HNArticleTableViewCell
-        cell.setData()
-
+        let article = self.articles[indexPath.row] as Article
+        cell.setData(article: article)
         return cell
     }
 

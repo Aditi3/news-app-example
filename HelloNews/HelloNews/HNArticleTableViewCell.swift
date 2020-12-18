@@ -25,9 +25,9 @@ class HNArticleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setData() {
-        titleLabel?.text = "Title comes here"
-        categoryLabel?.text = "Category Comes here"
+    func setData(article: Article) {
+        titleLabel?.text = article.title
+        categoryLabel?.text = article.category.rawValue
         articleImageView?.image = UIImage()
     }
 
