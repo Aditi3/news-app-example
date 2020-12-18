@@ -9,6 +9,8 @@
 import UIKit
 
 class HNArticlesTableViewController: UITableViewController {
+    
+    var articles = [Article]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
