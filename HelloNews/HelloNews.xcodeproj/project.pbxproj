@@ -11,6 +11,7 @@
 		4942FF94258C43C800CB3075 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4942FF92258C43C800CB3075 /* Main.storyboard */; };
 		4942FF96258C43CB00CB3075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4942FF95258C43CB00CB3075 /* Assets.xcassets */; };
 		4942FF99258C43CB00CB3075 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4942FF97258C43CB00CB3075 /* LaunchScreen.storyboard */; };
+		4942FFA9258C6FEC00CB3075 /* HNArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942FFA8258C6FEC00CB3075 /* HNArticlesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		4942FF95258C43CB00CB3075 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4942FF98258C43CB00CB3075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4942FF9A258C43CB00CB3075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4942FFA8258C6FEC00CB3075 /* HNArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNArticlesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				4942FF8C258C43C800CB3075 /* AppDelegate.swift */,
+				4942FFA8258C6FEC00CB3075 /* HNArticlesTableViewController.swift */,
 				4942FF92258C43C800CB3075 /* Main.storyboard */,
 				4942FF95258C43CB00CB3075 /* Assets.xcassets */,
 				4942FF97258C43CB00CB3075 /* LaunchScreen.storyboard */,
@@ -133,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4942FF8D258C43C800CB3075 /* AppDelegate.swift in Sources */,
+				4942FFA9258C6FEC00CB3075 /* HNArticlesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
