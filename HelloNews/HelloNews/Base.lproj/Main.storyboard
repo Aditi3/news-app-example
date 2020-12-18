@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--News-->
+        <!--Top Headlines-->
         <scene sceneID="RpN-Ej-rIR">
             <objects>
                 <tableViewController id="Vl3-gV-BJv" customClass="HNArticlesTableViewController" customModule="HelloNews" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                             <outlet property="delegate" destination="Vl3-gV-BJv" id="cCD-yL-GUW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="News" id="DXY-1z-Oeu">
+                    <navigationItem key="navigationItem" title="Top Headlines" id="DXY-1z-Oeu">
                         <barButtonItem key="backBarButtonItem" title="Articles" id="S4v-Iz-c6g"/>
                     </navigationItem>
                     <connections>
@@ -103,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tls-gL-aJO">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -130,9 +130,11 @@
         <scene sceneID="hLC-ya-mcW">
             <objects>
                 <navigationController id="cO9-JO-Pgs" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jtO-a0-UXN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jtO-a0-UXN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Vl3-gV-BJv" kind="relationship" relationship="rootViewController" id="6mg-wR-Zvf"/>
