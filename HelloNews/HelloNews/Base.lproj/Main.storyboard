@@ -102,10 +102,29 @@
                     <view key="view" contentMode="scaleToFill" id="V3K-Hu-IXH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-IL-nK9">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dCw-cZ-k6K"/>
-                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dCw-cZ-k6K" firstAttribute="trailing" secondItem="Sbd-IL-nK9" secondAttribute="trailing" id="0Ty-3Y-ho9"/>
+                            <constraint firstItem="dCw-cZ-k6K" firstAttribute="bottom" secondItem="Sbd-IL-nK9" secondAttribute="bottom" id="MT8-A2-bTQ"/>
+                            <constraint firstItem="Sbd-IL-nK9" firstAttribute="top" secondItem="dCw-cZ-k6K" secondAttribute="top" id="tZa-aR-Ysx"/>
+                            <constraint firstItem="Sbd-IL-nK9" firstAttribute="leading" secondItem="dCw-cZ-k6K" secondAttribute="leading" id="tzT-mU-HzI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sMR-yz-KJx"/>
+                    <connections>
+                        <outlet property="webView" destination="Sbd-IL-nK9" id="d3l-eM-Ott"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRY-x6-OvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,9 +152,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
