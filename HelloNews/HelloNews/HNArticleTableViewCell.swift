@@ -42,6 +42,8 @@ class HNArticleTableViewCell: UITableViewCell {
         articleImageView?.layer.cornerRadius = 3.0
         articleImageView?.layer.shouldRasterize = true
         articleImageView?.layer.masksToBounds = true
+       
+        addOverlay(imageView: articleImageView!)
     }
     
     func layoutView() {
@@ -49,7 +51,6 @@ class HNArticleTableViewCell: UITableViewCell {
         // set the shadow of the view's layer
         containerView?.layer.backgroundColor = UIColor.clear.cgColor
         containerView?.layer.shadowColor = UIColor.black.cgColor
-        
         containerView?.layer.shadowOffset = CGSize(width: 0, height: 1.0)
         containerView?.layer.shadowOpacity = 0.3
         containerView?.layer.shadowRadius = 3.0
@@ -64,6 +65,13 @@ class HNArticleTableViewCell: UITableViewCell {
         categoryLabel?.backgroundColor = article.categoryColor
         let url = URL(string: article.urlToImage)
         articleImageView?.kf.setImage(with: url)
+    }
+    
+    func addOverlay(imageView: UIImageView) {
+        let tintView = UIView()
+        tintView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        tintView.frame = CGRect(x: 0, y: 0, width: imageView.frame.width, height: imageView.frame.height)
+        imageView.addSubview(tintView)
     }
     
 }
