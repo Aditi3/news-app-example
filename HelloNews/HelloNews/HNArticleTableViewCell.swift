@@ -84,7 +84,7 @@ class HNArticleTableViewCell: UITableViewCell {
     
     func addOverlay(imageView: UIImageView) {
         self.tintView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-        self.tintView.frame = CGRect(x: 0, y: 0, width: imageView.frame.width, height: imageView.frame.height)
+        self.tintView.frame = .zero
         imageView.addSubview(self.tintView)
     }
     
