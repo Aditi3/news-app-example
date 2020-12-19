@@ -25,8 +25,6 @@ class HNArticleTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     func setupLayout() {
@@ -36,12 +34,14 @@ class HNArticleTableViewCell: UITableViewCell {
         titleLabel.numberOfLines = 3
         
         categoryLabel.textAlignment = .center
+        categoryLabel.layer.cornerRadius = 3.0
+        categoryLabel.layer.masksToBounds = true
         
         articleImageView.contentMode = .center
         articleImageView.layer.cornerRadius = 3.0
         articleImageView.layer.shouldRasterize = true
         articleImageView.layer.masksToBounds = true
-       
+        
         addOverlay(imageView: articleImageView!)
     }
     
@@ -58,11 +58,12 @@ class HNArticleTableViewCell: UITableViewCell {
     
     func setData(article: Article) {
         titleLabel.text = article.title
-        categoryLabel.text = "  \(article.category.rawValue)  \u{200c}"
         
+        categoryLabel.text = "  \(article.category.rawValue)  \u{200c}"
         categoryLabel.backgroundColor = article.categoryColor
+       
         let url = URL(string: article.urlToImage)
-        articleImageView.kf.setImage(with: url)
+        articleImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder_news"))
     }
     
     func addOverlay(imageView: UIImageView) {
