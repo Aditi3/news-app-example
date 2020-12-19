@@ -85,7 +85,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Top Headlines" id="DXY-1z-Oeu">
-                        <barButtonItem key="backBarButtonItem" title="Articles" id="S4v-Iz-c6g"/>
+                        <barButtonItem key="backBarButtonItem" title="Headlines" id="S4v-Iz-c6g"/>
                     </navigationItem>
                     <connections>
                         <segue destination="0oy-yY-cz5" kind="show" identifier="segue_goToURL" id="IHE-Wv-1Rt"/>
@@ -137,8 +137,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jtO-a0-UXN">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Vl3-gV-BJv" kind="relationship" relationship="rootViewController" id="6mg-wR-Zvf"/>
