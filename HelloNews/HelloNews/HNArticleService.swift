@@ -63,7 +63,10 @@ class HNArticleService {
                                     article.categoryColor = UIColor(red: 0.949, green: 0.396, blue: 0.220, alpha: 1.00)
                                 }
                             }
-                            newsArticles(articles)
+                            
+                            DispatchQueue.main.async {
+                                newsArticles(articles)
+                            }
                         }
                     }
                 case .failure(let error):
