@@ -54,6 +54,21 @@ class HNArticlesTableViewController: UITableViewController {
         cell.setData(article: article)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let article = articles[indexPath.row]
+        performSegue(withIdentifier: "segue_goToURL", sender: article)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue_goToURL" {
+            if let article = sender as? Article {
+                if let webVC = segue.destination as? HNArticleDetailViewController {
+                    webVC.article = article
+                }
+            }
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
