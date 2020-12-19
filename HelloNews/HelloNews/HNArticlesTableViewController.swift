@@ -12,16 +12,23 @@ class HNArticlesTableViewController: UITableViewController {
     
     var articles = [Article]()
     
+    
+    // MARK: - View Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         loadData()
     }
     
+    // MARK: - Setup
+    
     func setup() {
         tableView.separatorStyle = .none
     }
     
+    // MARK: - Load Data
+
     func loadData() {
         HNArticleService().fetchArticles { (articles) in
             // Handle fetched articles
@@ -59,6 +66,8 @@ class HNArticlesTableViewController: UITableViewController {
         let article = articles[indexPath.row]
         performSegue(withIdentifier: "segue_goToURL", sender: article)
     }
+    
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segue_goToURL" {

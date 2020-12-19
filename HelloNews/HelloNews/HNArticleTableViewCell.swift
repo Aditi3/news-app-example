@@ -16,6 +16,8 @@ class HNArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var containerView: UIView!
     
+    // MARK: - Life Cycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,6 +29,8 @@ class HNArticleTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - Setup Layout
+
     func setupLayout() {
         titleLabel.textAlignment = .left
         titleLabel.textColor = .white
@@ -56,6 +60,8 @@ class HNArticleTableViewCell: UITableViewCell {
         containerView.layer.cornerRadius = 3.0
     }
     
+    // MARK: - Populate Data
+    
     func setData(article: Article) {
         titleLabel.text = article.title
         
@@ -65,6 +71,8 @@ class HNArticleTableViewCell: UITableViewCell {
         let url = URL(string: article.urlToImage)
         articleImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder_news"))
     }
+    
+    // MARK: - Extra Methods
     
     func addOverlay(imageView: UIImageView) {
         let tintView = UIView()
