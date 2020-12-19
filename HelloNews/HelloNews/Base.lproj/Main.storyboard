@@ -58,9 +58,10 @@
                                                 <constraint firstItem="UJd-QN-z5k" firstAttribute="leading" secondItem="qu1-pY-kEw" secondAttribute="leading" id="Sw1-vd-Sgq"/>
                                                 <constraint firstItem="u9n-eE-ZYP" firstAttribute="leading" secondItem="UJd-QN-z5k" secondAttribute="leading" constant="10" id="bxV-5S-cy1"/>
                                                 <constraint firstAttribute="trailing" secondItem="UJd-QN-z5k" secondAttribute="trailing" id="dF2-OX-jkM"/>
+                                                <constraint firstItem="IcH-0G-bLR" firstAttribute="top" secondItem="UJd-QN-z5k" secondAttribute="top" constant="10" id="dTj-l3-Wmw"/>
                                                 <constraint firstAttribute="bottom" secondItem="UJd-QN-z5k" secondAttribute="bottom" id="hGO-NJ-2Ad"/>
-                                                <constraint firstItem="IcH-0G-bLR" firstAttribute="top" secondItem="qu1-pY-kEw" secondAttribute="top" constant="10" id="k64-st-LeJ"/>
                                                 <constraint firstItem="UJd-QN-z5k" firstAttribute="top" secondItem="qu1-pY-kEw" secondAttribute="top" id="ugD-FA-Nk4"/>
+                                                <constraint firstItem="IcH-0G-bLR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="qu1-pY-kEw" secondAttribute="leading" constant="240" id="zm4-tr-JG9"/>
                                             </constraints>
                                         </view>
                                     </subviews>
