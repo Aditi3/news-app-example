@@ -14,6 +14,7 @@
 		4942FFA9258C6FEC00CB3075 /* HNArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942FFA8258C6FEC00CB3075 /* HNArticlesTableViewController.swift */; };
 		4942FFBE258C7C4A00CB3075 /* HNArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942FFBD258C7C4A00CB3075 /* HNArticleService.swift */; };
 		4942FFC6258CD67600CB3075 /* HNArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942FFC5258CD67600CB3075 /* HNArticleTableViewCell.swift */; };
+		4942FFD1258D99E800CB3075 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942FFD0258D99E800CB3075 /* AppConfig.swift */; };
 		BCEE274DC79332146D854AD5 /* Pods_HelloNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE33C7B80499DC5DCAC9A0D6 /* Pods_HelloNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		4942FFA8258C6FEC00CB3075 /* HNArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNArticlesTableViewController.swift; sourceTree = "<group>"; };
 		4942FFBD258C7C4A00CB3075 /* HNArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNArticleService.swift; sourceTree = "<group>"; };
 		4942FFC5258CD67600CB3075 /* HNArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNArticleTableViewCell.swift; sourceTree = "<group>"; };
+		4942FFD0258D99E800CB3075 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7FAB77480934B012B6A533A6 /* Pods-HelloNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloNews.release.xcconfig"; path = "Target Support Files/Pods-HelloNews/Pods-HelloNews.release.xcconfig"; sourceTree = "<group>"; };
 		BE33C7B80499DC5DCAC9A0D6 /* Pods_HelloNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				4942FF8C258C43C800CB3075 /* AppDelegate.swift */,
+				4942FFD0258D99E800CB3075 /* AppConfig.swift */,
 				4942FFC5258CD67600CB3075 /* HNArticleTableViewCell.swift */,
 				4942FFA8258C6FEC00CB3075 /* HNArticlesTableViewController.swift */,
 				4942FFBD258C7C4A00CB3075 /* HNArticleService.swift */,
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4942FFC6258CD67600CB3075 /* HNArticleTableViewCell.swift in Sources */,
+				4942FFD1258D99E800CB3075 /* AppConfig.swift in Sources */,
 				4942FF8D258C43C800CB3075 /* AppDelegate.swift in Sources */,
 				4942FFA9258C6FEC00CB3075 /* HNArticlesTableViewController.swift in Sources */,
 				4942FFBE258C7C4A00CB3075 /* HNArticleService.swift in Sources */,

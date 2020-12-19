@@ -14,7 +14,9 @@ class HNArticleService {
     
     func fetchArticles(newsArticles : @escaping ([Article]) -> Void) {
         
-        AF.request("https://newsapi.org/v2/top-headlines?country=us&apiKey=a1c8863f03a74528b904487963a754b7", method: .get, encoding: JSONEncoding.default)
+        let newsUrl = "https://newsapi.org/v2/top-headlines?country=us&apiKey=\(AppConfig.newsApiKey)"
+        
+        AF.request(newsUrl, method: .get, encoding: JSONEncoding.default)
             .responseJSON { response in
                 switch response.result {
                 
