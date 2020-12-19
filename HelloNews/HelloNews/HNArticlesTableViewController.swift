@@ -38,6 +38,12 @@ class HNArticlesTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - Actions
+    
+    @IBAction func reloadTapped(_ sender: Any) {
+        loadData()
+    }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -86,6 +86,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Top Headlines" id="DXY-1z-Oeu">
                         <barButtonItem key="backBarButtonItem" title="Headlines" id="S4v-Iz-c6g"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="i6U-MP-0X9">
+                            <connections>
+                                <action selector="reloadTapped:" destination="Vl3-gV-BJv" id="nMY-Fc-3cj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="0oy-yY-cz5" kind="show" identifier="segue_goToURL" id="IHE-Wv-1Rt"/>
@@ -104,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-IL-nK9">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -121,7 +126,7 @@
                             <constraint firstItem="Sbd-IL-nK9" firstAttribute="leading" secondItem="dCw-cZ-k6K" secondAttribute="leading" id="tzT-mU-HzI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sMR-yz-KJx"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="sMR-yz-KJx"/>
                     <connections>
                         <outlet property="webView" destination="Sbd-IL-nK9" id="d3l-eM-Ott"/>
                     </connections>
@@ -137,6 +142,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jtO-a0-UXN">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="secondaryLabelColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Vl3-gV-BJv" kind="relationship" relationship="rootViewController" id="6mg-wR-Zvf"/>
@@ -148,6 +154,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
