@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cO9-JO-Pgs">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -14,28 +14,28 @@
             <objects>
                 <tableViewController id="Vl3-gV-BJv" customClass="HNArticlesTableViewController" customModule="HelloNews" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TtP-lC-ax4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCellIdentifier" rowHeight="491" id="hot-ka-QVX" customClass="HNArticleTableViewCell" customModule="HelloNews" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="491"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCellIdentifier" id="hot-ka-QVX" customClass="HNArticleTableViewCell" customModule="HelloNews" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="320.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hot-ka-QVX" id="fri-A7-fkK">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="491"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="320.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qu1-pY-kEw">
-                                            <rect key="frame" x="10" y="10" width="394" height="394"/>
+                                            <rect key="frame" x="10" y="10" width="300" height="300.5"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UJd-QN-z5k">
-                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="394"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="300.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="UJd-QN-z5k" secondAttribute="height" multiplier="1:1" id="q8R-qC-VYf"/>
+                                                        <constraint firstAttribute="width" secondItem="UJd-QN-z5k" secondAttribute="height" id="KIJ-Tx-JWR"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcH-0G-bLR">
-                                                    <rect key="frame" x="333" y="10" width="51" height="32"/>
+                                                    <rect key="frame" x="239" y="10" width="51" height="32"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="SfT-Ym-NjI"/>
                                                     </constraints>
@@ -44,7 +44,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do Canada geese still fly south for winter? Yes, but it's complicated. North America’s growing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="u9n-eE-ZYP">
-                                                    <rect key="frame" x="10" y="343" width="374" height="41"/>
+                                                    <rect key="frame" x="10" y="249.5" width="280" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -52,23 +52,23 @@
                                             </subviews>
                                             <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                             <constraints>
-                                                <constraint firstItem="u9n-eE-ZYP" firstAttribute="leading" secondItem="qu1-pY-kEw" secondAttribute="leading" constant="10" id="J8i-Gs-YNf"/>
+                                                <constraint firstItem="u9n-eE-ZYP" firstAttribute="bottom" secondItem="UJd-QN-z5k" secondAttribute="bottom" constant="-10" id="2tJ-Wt-onO"/>
+                                                <constraint firstItem="u9n-eE-ZYP" firstAttribute="trailing" secondItem="UJd-QN-z5k" secondAttribute="trailing" constant="-10" id="4x6-NT-Egs"/>
+                                                <constraint firstItem="IcH-0G-bLR" firstAttribute="trailing" secondItem="UJd-QN-z5k" secondAttribute="trailing" constant="-10" id="JV3-Eg-zJt"/>
                                                 <constraint firstItem="UJd-QN-z5k" firstAttribute="leading" secondItem="qu1-pY-kEw" secondAttribute="leading" id="Sw1-vd-Sgq"/>
+                                                <constraint firstItem="u9n-eE-ZYP" firstAttribute="leading" secondItem="UJd-QN-z5k" secondAttribute="leading" constant="10" id="bxV-5S-cy1"/>
                                                 <constraint firstAttribute="trailing" secondItem="UJd-QN-z5k" secondAttribute="trailing" id="dF2-OX-jkM"/>
                                                 <constraint firstAttribute="bottom" secondItem="UJd-QN-z5k" secondAttribute="bottom" id="hGO-NJ-2Ad"/>
                                                 <constraint firstItem="IcH-0G-bLR" firstAttribute="top" secondItem="qu1-pY-kEw" secondAttribute="top" constant="10" id="k64-st-LeJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="u9n-eE-ZYP" secondAttribute="bottom" constant="10" id="mxd-lf-CN8"/>
-                                                <constraint firstAttribute="trailing" secondItem="IcH-0G-bLR" secondAttribute="trailing" constant="10" id="r4X-oA-hTM"/>
                                                 <constraint firstItem="UJd-QN-z5k" firstAttribute="top" secondItem="qu1-pY-kEw" secondAttribute="top" id="ugD-FA-Nk4"/>
-                                                <constraint firstAttribute="trailing" secondItem="u9n-eE-ZYP" secondAttribute="trailing" constant="10" id="vIO-Hv-e58"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qu1-pY-kEw" secondAttribute="bottom" constant="10" id="L7D-Ea-fZ1"/>
+                                        <constraint firstAttribute="bottom" secondItem="qu1-pY-kEw" secondAttribute="bottom" constant="10" id="L7D-Ea-fZ1"/>
                                         <constraint firstItem="qu1-pY-kEw" firstAttribute="leading" secondItem="fri-A7-fkK" secondAttribute="leading" constant="10" id="RRH-Gu-LIR"/>
                                         <constraint firstItem="qu1-pY-kEw" firstAttribute="top" secondItem="fri-A7-fkK" secondAttribute="top" constant="10" id="h7t-SO-ynV"/>
-                                        <constraint firstItem="qu1-pY-kEw" firstAttribute="trailing" secondItem="fri-A7-fkK" secondAttribute="trailingMargin" constant="10" id="wHw-Vm-Spz"/>
+                                        <constraint firstAttribute="trailing" secondItem="qu1-pY-kEw" secondAttribute="trailing" constant="10" id="sNj-Jx-bWR"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -98,18 +98,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGA-WT-tyO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-188.40579710144928" y="839.73214285714278"/>
+            <point key="canvasLocation" x="-189.59999999999999" y="839.73013493253382"/>
         </scene>
         <!--Article Detail View Controller-->
         <scene sceneID="4gq-gP-hD6">
             <objects>
                 <viewController id="0oy-yY-cz5" customClass="HNArticleDetailViewController" customModule="HelloNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V3K-Hu-IXH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-IL-nK9">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -140,7 +140,7 @@
             <objects>
                 <navigationController id="cO9-JO-Pgs" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jtO-a0-UXN">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" systemColor="secondaryLabelColor"/>
                     </navigationBar>

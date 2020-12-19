@@ -15,6 +15,7 @@ class HNArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var containerView: UIView!
+    var tintView = UIView()
     
     // MARK: - Life Cycle
     
@@ -29,8 +30,15 @@ class HNArticleTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        DispatchQueue.main.async {
+            self.tintView.frame = CGRect(x: 0, y: 0, width: self.articleImageView.frame.width, height:  self.articleImageView.frame.height)
+        }
+    }
+    
     // MARK: - Setup Layout
-
+    
     func setupLayout() {
         titleLabel.textAlignment = .left
         titleLabel.textColor = .white
@@ -46,7 +54,8 @@ class HNArticleTableViewCell: UITableViewCell {
         articleImageView.layer.shouldRasterize = true
         articleImageView.layer.masksToBounds = true
         
-        addOverlay(imageView: articleImageView!)
+        self.addOverlay(imageView: self.articleImageView!)
+        
     }
     
     func layoutView() {
@@ -67,7 +76,7 @@ class HNArticleTableViewCell: UITableViewCell {
         
         categoryLabel.text = "  \(article.category.rawValue)  \u{200c}"
         categoryLabel.backgroundColor = article.categoryColor
-       
+        
         let url = URL(string: article.urlToImage)
         articleImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder_news"))
     }
@@ -75,10 +84,9 @@ class HNArticleTableViewCell: UITableViewCell {
     // MARK: - Extra Methods
     
     func addOverlay(imageView: UIImageView) {
-        let tintView = UIView()
-        tintView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-        tintView.frame = CGRect(x: 0, y: 0, width: imageView.frame.width, height: imageView.frame.height)
-        imageView.addSubview(tintView)
+        self.tintView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        self.tintView.frame = CGRect(x: 0, y: 0, width: imageView.frame.width, height: imageView.frame.height)
+        imageView.addSubview(self.tintView)
     }
     
 }
