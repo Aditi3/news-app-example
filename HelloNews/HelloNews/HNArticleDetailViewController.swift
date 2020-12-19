@@ -17,9 +17,13 @@ class HNArticleDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         loadData()
     }
     
+    func setup() {
+        webView.backgroundColor = .white
+    }
     
     func loadData() {
         if let url = URL(string: article.url) {
