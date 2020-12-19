@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4942FF8D258C43C800CB3075 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942FF8C258C43C800CB3075 /* AppDelegate.swift */; };
+		4942FF8D258C43C800CB3075 /* HNAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942FF8C258C43C800CB3075 /* HNAppDelegate.swift */; };
 		4942FF94258C43C800CB3075 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4942FF92258C43C800CB3075 /* Main.storyboard */; };
 		4942FF96258C43CB00CB3075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4942FF95258C43CB00CB3075 /* Assets.xcassets */; };
 		4942FF99258C43CB00CB3075 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4942FF97258C43CB00CB3075 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		0CBAE5B34CC698531EC3EC83 /* Pods-HelloNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloNews.debug.xcconfig"; path = "Target Support Files/Pods-HelloNews/Pods-HelloNews.debug.xcconfig"; sourceTree = "<group>"; };
 		4942FF89258C43C800CB3075 /* HelloNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4942FF8C258C43C800CB3075 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4942FF8C258C43C800CB3075 /* HNAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HNAppDelegate.swift; sourceTree = "<group>"; };
 		4942FF93258C43C800CB3075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4942FF95258C43CB00CB3075 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4942FF98258C43CB00CB3075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		4942FF8B258C43C800CB3075 /* HelloNews */ = {
 			isa = PBXGroup;
 			children = (
-				4942FF8C258C43C800CB3075 /* AppDelegate.swift */,
+				4942FF8C258C43C800CB3075 /* HNAppDelegate.swift */,
 				4942FFD0258D99E800CB3075 /* HNAppConfig.swift */,
 				4942FFC5258CD67600CB3075 /* HNArticleTableViewCell.swift */,
 				4942FFA8258C6FEC00CB3075 /* HNArticlesTableViewController.swift */,
@@ -218,7 +218,7 @@
 				4942FFD6258DC5C100CB3075 /* HNArticleDetailViewController.swift in Sources */,
 				4942FFC6258CD67600CB3075 /* HNArticleTableViewCell.swift in Sources */,
 				4942FFD1258D99E800CB3075 /* HNAppConfig.swift in Sources */,
-				4942FF8D258C43C800CB3075 /* AppDelegate.swift in Sources */,
+				4942FF8D258C43C800CB3075 /* HNAppDelegate.swift in Sources */,
 				4942FFA9258C6FEC00CB3075 /* HNArticlesTableViewController.swift in Sources */,
 				4942FFBE258C7C4A00CB3075 /* HNArticleService.swift in Sources */,
 			);
