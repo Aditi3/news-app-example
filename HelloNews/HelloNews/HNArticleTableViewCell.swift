@@ -15,10 +15,13 @@ class HNArticleTableViewCell: UITableViewCell {
     @IBOutlet var categoryLabel: UILabel?
     @IBOutlet var articleImageView: UIImageView?
     
+    @IBOutlet var containerView: UIView?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setupLayout()
+        layoutView()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,7 +38,23 @@ class HNArticleTableViewCell: UITableViewCell {
         
         categoryLabel?.textAlignment = .center
         
-        articleImageView?.contentMode = .scaleAspectFill
+        articleImageView?.contentMode = .center
+        articleImageView?.layer.cornerRadius = 3.0
+        articleImageView?.layer.shouldRasterize = true
+        articleImageView?.layer.masksToBounds = true
+    }
+    
+    func layoutView() {
+        
+        // set the shadow of the view's layer
+        containerView?.layer.backgroundColor = UIColor.clear.cgColor
+        containerView?.layer.shadowColor = UIColor.black.cgColor
+        
+        containerView?.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        containerView?.layer.shadowOpacity = 0.3
+        containerView?.layer.shadowRadius = 3.0
+        
+        containerView?.layer.cornerRadius = 3.0
     }
     
     func setData(article: Article) {
