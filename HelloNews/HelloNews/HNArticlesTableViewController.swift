@@ -14,7 +14,12 @@ class HNArticlesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         loadData()
+    }
+    
+    func setup() {
+        tableView.separatorStyle = .none
     }
     
     func loadData() {
@@ -44,6 +49,7 @@ class HNArticlesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCellIdentifier", for: indexPath) as! HNArticleTableViewCell
+        cell.selectionStyle = .none
         let article = self.articles[indexPath.row] as Article
         cell.setData(article: article)
         return cell
