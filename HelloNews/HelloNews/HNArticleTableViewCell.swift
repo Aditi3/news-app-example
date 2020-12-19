@@ -55,7 +55,6 @@ class HNArticleTableViewCell: UITableViewCell {
         articleImageView.layer.masksToBounds = true
         
         self.addOverlay(imageView: self.articleImageView!)
-        
     }
     
     func layoutView() {
