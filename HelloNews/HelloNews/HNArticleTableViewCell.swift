@@ -53,6 +53,7 @@ class HNArticleTableViewCell: UITableViewCell {
         articleImageView.layer.cornerRadius = 3.0
         articleImageView.layer.shouldRasterize = true
         articleImageView.layer.masksToBounds = true
+        articleImageView.contentMode = .scaleAspectFill
         
         self.addOverlay(imageView: self.articleImageView!)
     }
