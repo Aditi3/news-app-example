@@ -17,4 +17,6 @@ Hello Crypto Tracker is available under the MIT license. See [LICENSE](https://g
 <img src="/images/image-1.png" width="140">
 <img src="/images/image-2.png" width="140">
 <img src="/images/image-3.png" width="140">
+<img src="/images/image-4.png" width="140">
+<img src="/images/image-5.png" width="140">
 </p>
