@@ -12,6 +12,6 @@ struct HNAppConfig {
     
     static let newsApiKey = "a1c8863f03a74528b904487963a754b7"
     static let newsApiUrl = "https://newsapi.org/v2/top-headlines"
-    static let countryCode = "https://newsapi.org/v2/top-headlines"
+    static let countryCode = "us"
 
 }
