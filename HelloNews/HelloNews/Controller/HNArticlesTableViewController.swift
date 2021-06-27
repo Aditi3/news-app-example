@@ -10,8 +10,7 @@ import UIKit
 
 class HNArticlesTableViewController: UITableViewController {
     
-    var articles = [Article]()
-    
+    private var articles = [Article]()
     
     // MARK: - View Life Cycle
     
@@ -24,16 +23,16 @@ class HNArticlesTableViewController: UITableViewController {
     
     // MARK: - Setup
     
-    func setup() {
+    private func setup() {
         tableView.separatorStyle = .none
     }
     
     
     // MARK: - Load Data
     
-    func loadData() {
+    private func loadData() {
         HNArticleService().fetchArticles { (articles) in
-            // Handle fetched articles
+            // Handle fetched articles and Reload the Table
             print("Data is loaded, article count: \(articles.count)")
             self.articles = articles
             self.tableView.reloadData()
@@ -44,6 +43,7 @@ class HNArticlesTableViewController: UITableViewController {
     // MARK: - Actions
     
     @IBAction func reloadTapped(_ sender: Any) {
+        /// Request the Articles again and refresh the Article TableView
         loadData()
     }
     
@@ -55,12 +55,10 @@ class HNArticlesTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return articles.count
     }
     
@@ -68,11 +66,13 @@ class HNArticlesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCellIdentifier", for: indexPath) as! HNArticleTableViewCell
         cell.selectionStyle = .none
         let article = self.articles[indexPath.row] as Article
+        /// Update the Article Data for the Tableview Cell
         cell.setData(article: article)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        /// Pass the Selected Article Data to the WebView Controller
         let article = articles[indexPath.row]
         performSegue(withIdentifier: "segue_goToURL", sender: article)
     }
