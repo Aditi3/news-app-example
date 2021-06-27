@@ -12,6 +12,10 @@ import Alamofire
 
 class HNArticleService {
     
+    /// Fetches the News data- More information: https://newsapi.org/docs
+    ///
+    /// - Parameters:
+    ///   - success: returns Article if the data was fetched successfully from the API
     func fetchArticles(newsArticles : @escaping ([Article]) -> Void) {
         
         let newsUrl = "\(HNAppConfig.newsApiUrl)?country=\(HNAppConfig.countryCode)&apiKey=\(HNAppConfig.newsApiKey)"
@@ -23,10 +27,12 @@ class HNArticleService {
                 case .success(let json):
                     
                     if let jsonDict = json as? [String:Any] {
+                        
                         print("Fetched Top Headlines Json: \(jsonDict)")
                         
                         if let jsonArticles = jsonDict["articles"] as? [[String:Any]] {
                             print("Fetched Top Headlines Json: \(jsonArticles)")
+                            /// Parses fetched articles json data to an object of type Article
                             var articles = [Article]()
                             for jsonArticle in jsonArticles {
                                 guard let title = jsonArticle["title"] as? String,
@@ -41,8 +47,10 @@ class HNArticleService {
                                 article.urlToImage = urlToImage
                                 article.url = url
                                 article.description = description
+                                /// Create an Array of the articles
                                 articles.append(article)
                                 
+                                /// Classify the category based on title and description using DocumentClassifier - For more Information: https://github.com/toddkramer/DocumentClassifier
                                 guard let classification = DocumentClassifier().classify(title + description) else { return }
                                 
                                 switch (classification.prediction.category) {
@@ -64,19 +72,21 @@ class HNArticleService {
                                 }
                             }
                             
+                            /// Update the UI and Data on the Main Thread
                             DispatchQueue.main.async {
                                 newsArticles(articles)
                             }
                         }
                     }
                 case .failure(let error):
-                    print(error)
+                    print("Something went wrong while fetching the News Articles:\(error)")
                 }
             }
     }
     
 }
 
+/// Article Model
 class Article {
     var title = ""
     var urlToImage = ""
@@ -86,6 +96,7 @@ class Article {
     var categoryColor = UIColor.red
 }
 
+/// News Category enum
 enum NewsCategory : String {
     case business = "💼 Business"
     case entertainment = "🎭 Entertainment"
