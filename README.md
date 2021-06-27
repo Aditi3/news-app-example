@@ -5,7 +5,7 @@
 
 ## 👋 Introduction
 
-Application demostrating fetching of top headlines from [NewsAPI.org](https://newsapi.org/docs) and usage of Core ML for categorisation of news articles.
+Application demonstrating fetching of top headlines from [NewsAPI.org](https://newsapi.org/docs) and usage of Core ML for categorisation of news articles.
 
 ## 📄 License
 
