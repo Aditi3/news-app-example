@@ -77,18 +77,58 @@
 		4942FF8B258C43C800CB3075 /* HelloNews */ = {
 			isa = PBXGroup;
 			children = (
-				4942FF8C258C43C800CB3075 /* HNAppDelegate.swift */,
-				4942FFD0258D99E800CB3075 /* HNAppConfig.swift */,
-				4942FFC5258CD67600CB3075 /* HNArticleTableViewCell.swift */,
-				4942FFA8258C6FEC00CB3075 /* HNArticlesTableViewController.swift */,
-				4942FFD5258DC5C100CB3075 /* HNArticleDetailViewController.swift */,
-				4942FFBD258C7C4A00CB3075 /* HNArticleService.swift */,
-				4942FF92258C43C800CB3075 /* Main.storyboard */,
+				4980E20F2688BF4D00B04BFF /* App */,
+				4980E2132688BF7C00B04BFF /* Model */,
+				4980E2112688BF5E00B04BFF /* View */,
+				4980E2122688BF6A00B04BFF /* Controller */,
+				4980E2102688BF5600B04BFF /* Utils */,
 				4942FF95258C43CB00CB3075 /* Assets.xcassets */,
-				4942FF97258C43CB00CB3075 /* LaunchScreen.storyboard */,
 				4942FF9A258C43CB00CB3075 /* Info.plist */,
 			);
 			path = HelloNews;
+			sourceTree = "<group>";
+		};
+		4980E20F2688BF4D00B04BFF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4942FF8C258C43C800CB3075 /* HNAppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4980E2102688BF5600B04BFF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4942FFD0258D99E800CB3075 /* HNAppConfig.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4980E2112688BF5E00B04BFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4942FFC5258CD67600CB3075 /* HNArticleTableViewCell.swift */,
+				4942FF92258C43C800CB3075 /* Main.storyboard */,
+				4942FF97258C43CB00CB3075 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4980E2122688BF6A00B04BFF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4942FFA8258C6FEC00CB3075 /* HNArticlesTableViewController.swift */,
+				4942FFD5258DC5C100CB3075 /* HNArticleDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4980E2132688BF7C00B04BFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4942FFBD258C7C4A00CB3075 /* HNArticleService.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4FF9C8087C3FD4911BB5F220 /* Pods */ = {

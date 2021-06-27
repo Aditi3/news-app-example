@@ -66,7 +66,6 @@ class HNArticleTableViewCell: UITableViewCell {
         containerView.layer.shadowOffset = CGSize(width: 0, height: 1.0)
         containerView.layer.shadowOpacity = 0.3
         containerView.layer.shadowRadius = 3.0
-        
         containerView.layer.cornerRadius = 3.0
     }
     
