@@ -15,16 +15,18 @@ class HNArticleDetailViewController: UIViewController {
     
     var article = Article()
     
+    
     // MARK: - Life Cycle Method
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         loadData()
     }
     
+    
     // MARK: - Setup and Load data
-
+    
     func setup() {
         webView.backgroundColor = .white
     }

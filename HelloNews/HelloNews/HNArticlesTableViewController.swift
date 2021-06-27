@@ -14,12 +14,13 @@ class HNArticlesTableViewController: UITableViewController {
     
     
     // MARK: - View Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         loadData()
     }
+    
     
     // MARK: - Setup
     
@@ -27,8 +28,9 @@ class HNArticlesTableViewController: UITableViewController {
         tableView.separatorStyle = .none
     }
     
+    
     // MARK: - Load Data
-
+    
     func loadData() {
         HNArticleService().fetchArticles { (articles) in
             // Handle fetched articles
@@ -38,11 +40,13 @@ class HNArticlesTableViewController: UITableViewController {
         }
     }
     
+    
     // MARK: - Actions
     
     @IBAction func reloadTapped(_ sender: Any) {
         loadData()
     }
+    
     
     // MARK: - Table view data source
     
@@ -72,6 +76,7 @@ class HNArticlesTableViewController: UITableViewController {
         let article = articles[indexPath.row]
         performSegue(withIdentifier: "segue_goToURL", sender: article)
     }
+    
     
     // MARK: - Navigation
     

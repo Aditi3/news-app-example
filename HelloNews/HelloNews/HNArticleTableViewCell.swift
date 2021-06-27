@@ -37,6 +37,7 @@ class HNArticleTableViewCell: UITableViewCell {
         }
     }
     
+    
     // MARK: - Setup Layout
     
     func setupLayout() {
@@ -69,6 +70,7 @@ class HNArticleTableViewCell: UITableViewCell {
         containerView.layer.cornerRadius = 3.0
     }
     
+    
     // MARK: - Populate Data
     
     func setData(article: Article) {
@@ -80,6 +82,7 @@ class HNArticleTableViewCell: UITableViewCell {
         let url = URL(string: article.urlToImage)
         articleImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder_news"))
     }
+    
     
     // MARK: - Extra Methods
     

@@ -17,6 +17,5 @@ class HNAppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    
 }
 
