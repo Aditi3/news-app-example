@@ -63,7 +63,7 @@ class HNArticlesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCellIdentifier", for: indexPath) as! HNArticleTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: HNAppConstants.CellIdentifier.article, for: indexPath) as! HNArticleTableViewCell
         cell.selectionStyle = .none
         let article = self.articles[indexPath.row] as Article
         /// Update the Article Data for the Tableview Cell
@@ -74,14 +74,14 @@ class HNArticlesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         /// Pass the Selected Article Data to the WebView Controller
         let article = articles[indexPath.row]
-        performSegue(withIdentifier: "segue_goToURL", sender: article)
+        performSegue(withIdentifier: HNAppConstants.SegueIdentifier.articleDetailPage, sender: article)
     }
     
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segue_goToURL" {
+        if segue.identifier == HNAppConstants.SegueIdentifier.articleDetailPage {
             if let article = sender as? Article {
                 if let webVC = segue.destination as? HNArticleDetailViewController {
                     webVC.article = article

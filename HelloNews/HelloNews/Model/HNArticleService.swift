@@ -18,7 +18,7 @@ class HNArticleService {
     ///   - success: returns Article if the data was fetched successfully from the API
     func fetchArticles(newsArticles : @escaping ([Article]) -> Void) {
         
-        let newsUrl = "\(HNAppConfig.newsApiUrl)?country=\(HNAppConfig.countryCode)&apiKey=\(HNAppConfig.newsApiKey)"
+        let newsUrl = "\(HNAppConstants.API.newsApiUrl)?country=\(HNAppConstants.API.countryCode)&apiKey=\(HNAppConstants.API.newsApiKey)"
         
         AF.request(newsUrl, method: .get, encoding: JSONEncoding.default)
             .responseJSON { response in
