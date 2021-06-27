@@ -15,7 +15,7 @@ class HNArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var containerView: UIView!
-    var tintView = UIView()
+    private var tintView = UIView()
     
     // MARK: - Life Cycle
     
@@ -41,21 +41,24 @@ class HNArticleTableViewCell: UITableViewCell {
     // MARK: - Setup Layout
     
     func setupLayout() {
+        /// Setup the Title Label
         titleLabel.textAlignment = .left
         titleLabel.textColor = .white
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         titleLabel.numberOfLines = 3
         
+        /// Setup the Category Label
         categoryLabel.textAlignment = .center
         categoryLabel.layer.cornerRadius = 3.0
         categoryLabel.layer.masksToBounds = true
         
+        /// Setup the Article Image View
         articleImageView.contentMode = .center
         articleImageView.layer.cornerRadius = 3.0
         articleImageView.layer.shouldRasterize = true
         articleImageView.layer.masksToBounds = true
         articleImageView.contentMode = .scaleAspectFill
-        
+        /// Add the Overlay to Article Image View
         self.addOverlay(imageView: self.articleImageView!)
     }
     
@@ -73,11 +76,12 @@ class HNArticleTableViewCell: UITableViewCell {
     // MARK: - Populate Data
     
     func setData(article: Article) {
+        /// Update Title Label
         titleLabel.text = article.title
-        
+        /// Update Category Label
         categoryLabel.text = "  \(article.category.rawValue)  \u{200c}"
         categoryLabel.backgroundColor = article.categoryColor
-        
+        /// Update Article Image View Using Kingfisher Image Cache Library
         let url = URL(string: article.urlToImage)
         articleImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder_news"))
     }
