@@ -7,6 +7,13 @@
 
 Application demonstrating fetching of top headlines from [NewsAPI.org](https://newsapi.org/docs) and usage of Core ML for categorisation of news articles.
 
+## 📰 Features
+
+- Fetch and Parse top headlines from [NewsAPI.org](https://newsapi.org/docs/endpoints/top-headlines)
+- Adds Tableview and Detail view to showcase fetched articles data
+- Showcase [Kingfisher](https://github.com/onevcat/Kingfisher) usage for downloading and caching images from the web
+- Used [DocumentClassifier](https://github.com/toddkramer/DocumentClassifier) framework for classifying documents into one of five categories (Business, Entertainment, Politics, Sports, and Technology). It uses a **CoreML** model.
+
 ## 📄 License
 
 Hello Crypto Tracker is available under the MIT license. See [LICENSE](https://github.com/Aditi3/crypto-tracker-example/blob/develop/LICENSE) for details.
