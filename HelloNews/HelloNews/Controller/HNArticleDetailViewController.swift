@@ -12,25 +12,27 @@ import WebKit
 class HNArticleDetailViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
-    
     var article = Article()
     
     // MARK: - Life Cycle Method
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setupUI()
         loadData()
     }
     
+    
     // MARK: - Setup and Load data
-
-    func setup() {
+    
+    func setupUI() {
+        /// Update the UI attributes for the Web View
         webView.backgroundColor = .white
     }
     
     func loadData() {
         if let url = URL(string: article.url) {
+            /// Load the Selected Article URL
             webView.load(URLRequest(url: url))
         }
     }
