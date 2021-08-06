@@ -31,11 +31,14 @@ class HNArticlesTableViewController: UITableViewController {
     // MARK: - Load Data
     
     private func loadData() {
-        HNArticleService().fetchArticles { (articles) in
+        ///[weak self]  ensures that once the completion handler returns some code, the app can release the memory
+        HNArticleService().fetchArticles { [weak self] (articles) in
             // Handle fetched articles and Reload the Table
-            print("Data is loaded, article count: \(articles.count)")
-            self.articles = articles
-            self.tableView.reloadData()
+            if let self = self {
+                print("Data is loaded, article count: \(articles.count)")
+                self.articles = articles
+                self.tableView.reloadData()
+            }
         }
     }
     
